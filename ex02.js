@@ -2,6 +2,14 @@
 
 function filterByCategory(products, category) {
   // your code here
+  let filtering = [];
+  for(let i = 0; i < products.length; i++) {
+    if (products[i].category === category) {
+      filtering = products[i];
+    }
+  }
+
+  return filtering;
 }
 
 console.log(filterByCategory([{ name: 'Apple', category: 'Fruit' }, { name: 'Carrot', category: 'Vegetable' }], 'Fruit')) // [{ name: 'Apple', category: 'Fruit' }]

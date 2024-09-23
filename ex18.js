@@ -4,6 +4,19 @@
 
 function fibonacci(n) {
   // your code here
+  let fibonacciArray = [];
+  let fibonacciNumber = 0;
+  for(let i = 0; i < n; i++) {
+    if(i <= 1) {
+      fibonacciArray.push(i);
+    } else {
+      fibonacciNumber = fibonacciArray[i-2] + fibonacciArray[i-1];
+      fibonacciArray.push(fibonacciNumber);
+    }
+  }
+  fibonacciNumber = fibonacciArray[n-1] + fibonacciArray[n-2];
+
+  return fibonacciNumber;
 }
 
 console.log(fibonacci(5)); // Output: 5

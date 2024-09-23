@@ -2,20 +2,20 @@
 
 function longestWord(text) {
   // your code here
-  const textArray = text.split(' ');
-  let longest = '';
+  const textArray = text.split(' '); // ['The', 'monkey', 'loves', 'bananas']
+  let longest = ''; // current longest word
 
   for(let i = 0; i < textArray.length; i++) {
     // if(textArray[i].length >= longest.length) {
     //   longest = textArray[i];
     // }
-    const currentWord = textArray[i];
+    const currentWord = textArray[i]; // current word in loop
     if(currentWord.length >= longest.length) {
-      longest = currentWord;
+      longest = currentWord; // store current word as the longest word if its longer
     }
   }
 
   return longest;
 }
 
-console.log(longestWord('The quick brown fox jumps over the lazy dog')); // 'jumps'
+console.log(longestWord('The monkey loves bananas')); // 'bananas'

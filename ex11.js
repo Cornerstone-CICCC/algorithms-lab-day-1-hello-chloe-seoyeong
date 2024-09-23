@@ -2,6 +2,11 @@
 
 function reverseWords(text) {
   // your code here
+  let textArray = text.split(' ');
+  let reverseArray = textArray.reverse();
+  let reverseText = reverseArray.join(' ');
+
+  return reverseText;
 }
 
 console.log(reverseWords('The quick brown fox')) // 'fox brown quick The'

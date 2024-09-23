@@ -10,7 +10,7 @@ function longestWord(text) {
     //   longest = textArray[i];
     // }
     const currentWord = textArray[i]; // current word in loop
-    if(currentWord.length >= longest.length) {
+    if(currentWord.length >= longest.length) { // check if currentWord is longer than longest
       longest = currentWord; // store current word as the longest word if its longer
     }
   }

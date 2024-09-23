@@ -2,48 +2,16 @@
 
 function formatDate(dateStr) {
   // your code here
-  let month;
   let dateArray = dateStr.split('-');
+  const MONTH = ["January", "Februrary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let dateMonth = "";
 
-  switch(dateArray[2]) {
-    case "01":
-      month = "January";
-      break;
-    case "02":
-      month = "Februrary";
-      break;
-    case "03":
-      month = "March";
-      break;
-    case "04":
-      month = "April";
-      break;
-    case "05":
-      month = "May";
-      break;
-    case "06":
-      month = "June";
-      break;
-    case "07":
-      month = "July";
-      break;
-    case "08":
-      month = "August";
-      break;
-    case "09":
-      month = "September";
-      break;
-    case "10":
-      month = "October";
-      break;
-    case "11":
-      month = "November";
-      break;
-    case "12":
-      month = "December";
-      break;
+  for(let i = 0; i < MONTH.length; i++) {
+    if(i === parseInt(dateArray[1]) - 1) {
+      dateMonth = MONTH[i];
+    }  
   }
-  newDateFormat = `${month} ${parseInt(dateArray[2])}, ${dateArray[0]}`;
+  newDateFormat = `${dateMonth} ${parseInt(dateArray[2])}, ${dateArray[0]}`;
 
   return newDateFormat;
 }
